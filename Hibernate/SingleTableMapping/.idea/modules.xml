@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SingleTableMapping.iml" filepath="$PROJECT_DIR$/.idea/modules/SingleTableMapping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SingleTableMapping_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SingleTableMapping_main.iml" group="SingleTableMapping" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SingleTableMapping_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SingleTableMapping_test.iml" group="SingleTableMapping" />
+    </modules>
+  </component>
+</project>
