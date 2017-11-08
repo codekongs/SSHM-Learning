@@ -10,6 +10,10 @@
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://123.206.194.41:3306/SingleTable?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</property>
 
+        <!--事务相关,配置后可以使用getCurrentSession()来获取事务-->
+        <!--thread用于本地事务(一个数据库),jta用于全局事务(多个数据库)-->
+        <property name="current_session_context_class">thread</property>
+
         <!-- 配置 Hibernate 的基本信息 -->
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="show_sql">true</property>

@@ -21,5 +21,8 @@
         <property name="address" type="java.lang.String">
             <column name="ADDRESS"/>
         </property>
+        <property name="image" type="java.sql.Blob">
+            <column name="IMAGE"/>
+        </property>
     </class>
 </hibernate-mapping>

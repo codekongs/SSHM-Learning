@@ -43,7 +43,7 @@ public class StudentTest {
 
     @Test
     public void autoCommitTransaction(){
-        Student student = new Student(2, "张三", "男", new Date(), "张家村");
+        Student student = new Student(2, "张三", "男", new Date(), "张家村", null);
         //设置自动提交事务(不建议)
         mSession.doWork(new Work() {
             @Override
