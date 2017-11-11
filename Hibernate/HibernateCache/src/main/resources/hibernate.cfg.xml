@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 配置连接数据库的基本信息 -->
+        <property name="connection.username">root</property>
+        <property name="connection.password">mysqlroot</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://123.206.194.41:3306/SingleTable?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</property>
+
+        <!--事务相关,配置后可以使用getCurrentSession()来获取事务-->
+        <!--thread用于本地事务(一个数据库),jta用于全局事务(多个数据库)-->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- 配置 Hibernate 的基本信息 -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <!-- 指定自动生成数据表的策略 -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--开启二级缓存-->
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <!--指定二级缓存的提供类-->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+
+        <!--映射文件-->
+        <mapping resource="hbm/User.hbm.xml"/>
+        <mapping resource="hbm/ProvinceDict.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

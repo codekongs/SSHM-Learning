@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="bean.ProvinceDict" table="PROVINCEDICT">
+        <!--配置二级缓存-->
+        <cache usage="read-only"/>
+        <id name="code" type="java.lang.String">
+            <column name="CODE"/>
+            <!--自定义主键-->
+            <generator class="assigned"/>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME"/>
+        </property>
+    </class>
+</hibernate-mapping>

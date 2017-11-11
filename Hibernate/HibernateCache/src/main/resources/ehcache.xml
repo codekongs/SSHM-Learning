@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ehcache>
+    <!--缓存文件保存路径-->
+    <diskStore path="java.io.tmpdir"/>
+
+    <!--默认配置-->
+    <!--
+    maxElementsInMemory:缓存的最大数量
+    eternal:设置元素是否是永久的,如果设置为true,则timeout失效
+    timeToIdleSeconds:设置元素过期前的空闲时间
+    timeToLiveSeconds:设置元素过期前的活动时间
+    overflowToDisk:当缓存中的数量达到限制后,是否保存到disk
+    -->
+
+    <defaultCache
+        maxElementsInMemory = "10000"
+        eternal = "false"
+        timeToIdleSeconds = "120"
+        timeToLiveSeconds = "120"
+        overflowToDisk = "true"/>
+
+    <cache name = "ProvinceDict"
+        maxElementsInMemory = "10000"
+        eternal = "false"
+        timeToIdleSeconds = "300"
+        timeToLiveSeconds = "600"
+        overflowToDisk = "true"/>
+</ehcache>
