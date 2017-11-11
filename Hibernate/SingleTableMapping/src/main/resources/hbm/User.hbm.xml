@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="model.User" table="USER">
+        <id name="uid" type="java.lang.Integer">
+            <column name="UID"/>
+            <generator class="native"/>
+        </id>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME"/>
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD"/>
+        </property>
+        <component name="address" class="model.Address">
+            <property name="province" type="java.lang.String">
+                <column name="PROVINCE"/>
+            </property>
+            <property name="city" type="java.lang.String">
+                <column name="CITY"/>
+            </property>
+            <property name="district" type="java.lang.String">
+                <column name="DISTRICT"/>
+            </property>
+        </component>
+    </class>
+</hibernate-mapping>

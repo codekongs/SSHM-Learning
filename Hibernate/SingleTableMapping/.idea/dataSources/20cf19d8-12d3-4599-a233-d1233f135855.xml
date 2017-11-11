@@ -14,30 +14,66 @@
       <Visible>1</Visible>
     </schema>
     <table id="8" parent="7" name="STUDENTS"/>
-    <column id="9" parent="8" name="SID">
+    <table id="9" parent="7" name="USER"/>
+    <column id="10" parent="8" name="SID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="10" parent="8" name="SNAME">
+    <column id="11" parent="8" name="SNAME">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="11" parent="8" name="GENDER">
+    <column id="12" parent="8" name="GENDER">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="12" parent="8" name="BIRTHDAY">
+    <column id="13" parent="8" name="BIRTHDAY">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="13" parent="8" name="ADDRESS">
+    <column id="14" parent="8" name="ADDRESS">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <key id="14" parent="8" name="PRIMARY">
+    <column id="15" parent="8" name="IMAGE">
+      <Position>6</Position>
+      <DataType>longblob|0</DataType>
+    </column>
+    <key id="16" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>SID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="17" parent="9" name="UID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="9" name="USERNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="19" parent="9" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="20" parent="9" name="PROVINCE">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="9" name="CITY">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="22" parent="9" name="DISTRICT">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="23" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UID</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

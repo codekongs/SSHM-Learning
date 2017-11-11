@@ -3,7 +3,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.jdbc.Work;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -62,21 +61,48 @@ public class SessionTest {
         mTransaction.commit();
         session1.close();
         session2.close();
-
+        mSessionFactory.close();
         System.out.println("close session1 = " + session1);
         System.out.println("close session2 = " + session2);
     }
 
     @Test
     public void testGetCurrentSession(){
+        Session session1 = mSessionFactory.getCurrentSession();
+        Session session2 = mSessionFactory.getCurrentSession();
+        session1.doWork(new Work() {
+            @Override
+            public void execute(Connection connection) throws SQLException {
+                System.out.println("session1 hashCode = " + connection.hashCode()
+                        + "\n" + "connection1 = " + connection);
+            }
+        });
 
+        session2.doWork(new Work() {
+            @Override
+            public void execute(Connection connection) throws SQLException {
+                System.out.println("session2 hashCode = " + connection.hashCode()
+                        + "\n" + "connection2 = " + connection);
+            }
+        });
+
+        System.out.println("session1 = " + session1);
+        System.out.println("session2 = " + session2);
+
+        mTransaction.commit();
+        //不需要手动关闭Session
+        //session1.close();
+        //session2.close();
+        mSessionFactory.close();
+        System.out.println("close session1 = " + session1);
+        System.out.println("close session2 = " + session2);
     }
 
-    @After
+   /* @After
     public void after(){
         //提交事务
         mTransaction.commit();
         mSession.close();
         mSessionFactory.close();
-    }
+    }*/
 }
