@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="bean.User" table="USERS">
+        <id name="uid" type="int">
+            <column name="UID"/>
+            <!--自定义主键-->
+            <generator class="native"/>
+        </id>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME"/>
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD"/>
+        </property>
+        <many-to-one name="department" cascade="save-update" class="bean.Department" column="CODE"/>
+    </class>
+</hibernate-mapping>

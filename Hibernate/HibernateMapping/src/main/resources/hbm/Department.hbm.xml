@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="bean.Department" table="Department">
+        <id name="code" type="int">
+            <column name="CODE"/>
+            <!--自定义主键-->
+            <generator class="assigned"/>
+        </id>
+        <property name="departname" type="java.lang.String">
+            <column name="DEPARTNAME"/>
+        </property>
+    </class>
+</hibernate-mapping>

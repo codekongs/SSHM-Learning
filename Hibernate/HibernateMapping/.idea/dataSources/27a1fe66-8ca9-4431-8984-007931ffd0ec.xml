@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="TXOS_MySQL">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="ICHAT">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="SingleTable">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="6" name="Department"/>
+    <table id="9" parent="6" name="GRADE"/>
+    <table id="10" parent="6" name="PROVINCEDICT"/>
+    <table id="11" parent="6" name="STU"/>
+    <table id="12" parent="6" name="STUDENT"/>
+    <table id="13" parent="6" name="STUDENTS"/>
+    <table id="14" parent="6" name="USER"/>
+    <table id="15" parent="6" name="USER2"/>
+    <table id="16" parent="6" name="USERS"/>
+    <column id="17" parent="8" name="CODE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="8" name="DEPARTNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="19" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CODE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="9" name="GID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="9" name="GNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="22" parent="9" name="GDESC">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="23" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>GID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="10" name="CODE">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="10" name="NAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="26" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CODE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="11" name="SID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="11" name="SNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="11" name="SSEX">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="30" parent="11" name="GID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="31" parent="11" name="FK88lc0l2f3lubypjwnqpcwf18g">
+      <ColNames>GID</ColNames>
+    </index>
+    <key id="32" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="12" name="cardId">
+      <Position>1</Position>
+      <DataType>varchar(18)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="12" name="sid">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="12" name="city">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="36" parent="12" name="province">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="name">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="sex">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="39" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cardId
+sid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="13" name="SID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="13" name="SNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="GENDER">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="43" parent="13" name="BIRTHDAY">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="44" parent="13" name="ADDRESS">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="IMAGE">
+      <Position>6</Position>
+      <DataType>longblob|0</DataType>
+    </column>
+    <key id="46" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="14" name="ID">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="14" name="USERNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="49" parent="14" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="50" parent="14" name="uid">
+      <Position>4</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="14" name="city">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="52" parent="14" name="province">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="53" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="15" name="uid">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="15" name="city">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="56" parent="15" name="province">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="57" parent="15" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="58" parent="15" name="username">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="59" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="60" parent="16" name="UID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="61" parent="16" name="USERNAME">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="62" parent="16" name="PASSWORD">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="63" parent="16" name="CODE">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="64" parent="16" name="FKbjd6hl4g7t8yiklwv98paow9x">
+      <ColNames>CODE</ColNames>
+    </index>
+    <key id="65" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

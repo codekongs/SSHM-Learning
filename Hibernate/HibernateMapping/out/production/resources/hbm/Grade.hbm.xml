@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="bean.Grade" table="GRADE">
+        <id name="gid" type="int">
+            <column name="GID"/>
+            <!--自定义主键-->
+            <generator class="native"/>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="GNAME"/>
+        </property>
+        <property name="gdesc" type="java.lang.String">
+            <column name="GDESC"/>
+        </property>
+        <set name="stus" table="STU" cascade="all">
+            <key column="GID"/>
+            <one-to-many class="bean.Stu"/>
+        </set>
+    </class>
+</hibernate-mapping>
