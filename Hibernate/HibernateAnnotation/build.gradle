@@ -15,6 +15,4 @@ dependencies {
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
     //Hibernate依赖包
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.12.Final'
-    //ehcache依赖包
-    compile group: 'org.hibernate', name: 'hibernate-ehcache', version: '5.2.12.Final'
 }
