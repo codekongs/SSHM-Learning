@@ -3,11 +3,11 @@
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping>
-    <class name="bean.Department" table="Department">
+    <class name="bean.Department" table="DEPARTMENT">
         <id name="code" type="int">
             <column name="CODE"/>
             <!--自定义主键-->
-            <generator class="assigned"/>
+            <generator class="native"/>
         </id>
         <property name="departname" type="java.lang.String">
             <column name="DEPARTNAME"/>

@@ -19,7 +19,7 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <!-- 指定自动生成数据表的策略 -->
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <!--引入映射类-->
         <!--<mapping class="bean.Grade"/>-->

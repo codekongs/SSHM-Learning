@@ -12,7 +12,7 @@
       <Visible>1</Visible>
     </schema>
     <schema id="7" parent="1" name="sys"/>
-    <table id="8" parent="6" name="Department"/>
+    <table id="8" parent="6" name="DEPARTMENT"/>
     <table id="9" parent="6" name="GRADE"/>
     <table id="10" parent="6" name="PROVINCEDICT"/>
     <table id="11" parent="6" name="STU"/>
@@ -25,6 +25,7 @@
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="18" parent="8" name="DEPARTNAME">
       <Position>2</Position>
@@ -231,7 +232,7 @@ sid</ColNames>
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="64" parent="16" name="FKbjd6hl4g7t8yiklwv98paow9x">
+    <index id="64" parent="16" name="FKl402p1yaytetp1gt0pfkq43m3">
       <ColNames>CODE</ColNames>
     </index>
     <key id="65" parent="16" name="PRIMARY">
